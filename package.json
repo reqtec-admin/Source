@@ -130,6 +130,24 @@
                 "type": "text",
                 "description": "Defaults to site description when empty"
             },
+            "enable_video_modal": {
+                "type": "boolean",
+                "default": true,
+                "group": "video_modal",
+                "description": "Enable or disable the video modal popup"
+            },
+            "video_modal_url": {
+                "type": "text",
+                "default": "https://www.youtube.com/embed/KPHYe_QNjcg",
+                "group": "video_modal",
+                "description": "YouTube video URL (without parameters)"
+            },
+            "video_modal_delay": {
+                "type": "text",
+                "default": "3",
+                "group": "video_modal",
+                "description": "Delay in seconds before showing the modal"
+            },
             "header_style": {
                 "type": "select",
                 "options": [
