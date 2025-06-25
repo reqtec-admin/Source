@@ -6,6 +6,7 @@ b-cov
 *.out
 *.pid
 *.gz
+*.zip
 
 pids
 logs
@@ -22,6 +23,7 @@ projectFilesBackup
 .DS_Store
 
 dist/
+tmp/
 
 config.json
 changelog.md

@@ -1,5 +1,5 @@
 {
-    "name": "source",
+    "name": "commit250",
     "description": "A default theme for the Ghost publishing platform",
     "demo": "https://source.ghost.io",
     "version": "1.5.0",
@@ -95,7 +95,7 @@
             },
             "site_background_color": {
                 "type": "color",
-                "default": "#ffffff"
+                "default": "#31383C"
             },
             "header_and_footer_color": {
                 "type": "select",
@@ -135,18 +135,6 @@
                 "default": true,
                 "group": "video_modal",
                 "description": "Enable or disable the video modal popup"
-            },
-            "video_modal_url": {
-                "type": "text",
-                "default": "https://www.youtube.com/embed/KPHYe_QNjcg",
-                "group": "video_modal",
-                "description": "YouTube video URL (without parameters)"
-            },
-            "video_modal_delay": {
-                "type": "text",
-                "default": "3",
-                "group": "video_modal",
-                "description": "Delay in seconds before showing the modal"
             },
             "header_style": {
                 "type": "select",
