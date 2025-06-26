@@ -83,19 +83,21 @@
     
 </div>
 
+{{#is "home"}}
 {{#if @custom.enable_video_modal}}
 {{#unless @member}}
-<div id="videoModal" style="display: none;">
-    <div style="position:relative; width:90%; max-width:900px; background:white; padding:20px; border-radius:8px;">
-        <h2 style="color:#333; text-align:center; margin-bottom:20px;">COMING SUMMER 2025!</h2>
-        <p style="color:#15181B; text-align:center; margin-bottom:20px;">Sign up for early access. Learn how you can make a change this year!</p>
+<div id="videoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
+    <div style="position:relative; width:100%; max-width:900px; background: white; padding:20px; border-radius:8px; max-height: 90vh; overflow-y: auto; padding-top: 80px;">
+        <button id="closeModalBtn" onclick="closeModal()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 40px; cursor: pointer; color: #999; opacity: 0.5; z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;" disabled>×</button>
+        <h2 style="color:#333; text-align:center; margin-bottom:20px; margin-top: 0;">COMING SUMMER 2025!</h2>
+        <p style="color:#15181B; text-align:center; margin-bottom:20px;">Learn how you can make a change this year!</p>
         <p style="color:#15181B; text-align:center; margin-bottom:20px;">It's time to confront this health crisis head on! Take the first step. </p>
         <div style="margin-bottom:20px;">
             <iframe id="youtubePlayer" width="100%" height="500" src="https://www.youtube.com/embed/KPHYe_QNjcg?autoplay=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div style="text-align:center;">
-            <a href="#/portal/signup" data-portal="signup" onclick="pauseVideo(); return true;" style="color:#ED0C33; text-decoration:none; font-weight:bold; padding: 10px 20px; border: 2px solid #ED0C33; border-radius: 5px; display: inline-block; margin-top: 10px; margin-bottom:20px;">Sign up here →</a>
-            <p style="color:#15181B; text-align:center; margin-bottom:20px;">Let's defeat this together. Challenge a friend. Like, share, follow, and subscribe!</p>
+            <a href="#/portal/signup" data-portal="signup" onclick="pauseVideo(); return true;" style="color:#ED0C33; text-decoration:none; font-weight:bold; padding: 10px 20px; border: 2px solid #ED0C33; border-radius: 5px; display: inline-block; margin-top: 10px; margin-bottom:20px;">Join us! →</a>
+            <p style="color:#15181B; text-align:center; margin-bottom:20px;">Let's defeat this together. Challenge a friend. Like, share, follow, and join the movement.</p>
             <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
                 <a href="https://youtube.com/@commit250" target="_blank" rel="noopener" style="color: #15181B; text-decoration: none;">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,13 +141,18 @@
         console.log('YouTube API Ready');
         player = new YT.Player('youtubePlayer', {
             events: {
-                'onReady': onPlayerReady
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
             }
         });
     }
 
     function onPlayerReady(event) {
         console.log('Player Ready');
+    }
+
+    function onPlayerStateChange(event) {
+        // No timer logic here anymore
     }
 
     // Function to show the modal
@@ -155,6 +162,23 @@
         if (modal) {
             modal.style.display = 'flex';
             modal.classList.add('modal-fade-in');
+            // Reset close button to disabled state when modal is shown
+            const closeBtn = document.getElementById('closeModalBtn');
+            if (closeBtn) {
+                closeBtn.disabled = true;
+                closeBtn.style.opacity = '0.5';
+                closeBtn.style.cursor = 'default';
+                closeBtn.style.color = '#999';
+                // Start 7 second timer to enable close button
+                console.log('Modal opened - setting 7 second timer for close button');
+                setTimeout(function() {
+                    console.log('7 seconds elapsed - enabling close button');
+                    closeBtn.disabled = false;
+                    closeBtn.style.opacity = '1';
+                    closeBtn.style.cursor = 'pointer';
+                    closeBtn.style.color = '#333';
+                }, 7000);
+            }
         } else {
             console.error('Modal element not found');
         }
@@ -205,6 +229,7 @@
 </script>
 {{/unless}}
 {{/if}}
+{{/is}}
 
 {{#is "post, page"}}
     {{> "lightbox"}}
