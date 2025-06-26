@@ -8,6 +8,7 @@
     text-align: center;
     border-top: 1px solid #e5e5e5;
     margin-top: 80px;
+    color: #fff;
 }
 
 .gh-footer-partners-header {
@@ -16,7 +17,7 @@
     letter-spacing: -0.025em;
     margin-bottom: 40px;
     text-align: center;
-    color: #e5e5e5;
+    color: #fff;
 }
 
 .gh-footer-partners-grid {
@@ -56,12 +57,12 @@
 }
 
 .gh-footer-partner-name {
-    font-size: 1.2rem;
-    font-weight: 500;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
     text-align: center;
     line-height: 1.3;
-    opacity: 0.8;
-    color: #e5e5e5;
+    opacity: 0.9;
 }
 
 /* Responsive styles */
@@ -93,7 +94,7 @@
     }
     
     .gh-footer-partner-name {
-        font-size: 8rem;
+        font-size: 1.1rem;
     }
 }
 
