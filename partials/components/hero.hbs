@@ -5,10 +5,8 @@
         <!-- Local MP4 Video Background from Theme Assets -->
         <video class="gh-video-bg" autoplay muted loop playsinline>
             <source src="{{asset "video/hero-background.mp4"}}" type="video/mp4">
+            <source src="/content/media/2025/06/hero-background.mp4" type="video/mp4">
         </video>
-        
-        <!-- YouTube Video Background Container - Fallback -->
-        <div id="youtube-bg" class="gh-video-container" style="display: none;"></div>
     </div>
     
     <!-- Video Overlay -->
@@ -94,46 +92,6 @@
     width: 100%;
     height: 100%;
     position: relative;
-}
-
-#youtube-bg {
-    width: 100% !important;
-    height: 100% !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    pointer-events: none;
-}
-
-#youtube-bg iframe {
-    width: 100% !important;
-    height: 100% !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    pointer-events: none;
-}
-
-/* Hide YouTube player elements */
-#youtube-bg .ytp-title,
-#youtube-bg .ytp-show-cards-title,
-#youtube-bg .ytp-watermark,
-#youtube-bg .ytp-pause-overlay,
-#youtube-bg .ytp-chrome-top,
-#youtube-bg .ytp-chrome-bottom,
-#youtube-bg .ytp-gradient-top,
-#youtube-bg .ytp-gradient-bottom {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
-/* Additional iframe-specific hiding */
-#youtube-bg iframe .ytp-title,
-#youtube-bg iframe .ytp-show-cards-title,
-#youtube-bg iframe .ytp-watermark,
-#youtube-bg iframe .ytp-pause-overlay {
-    display: none !important;
 }
 
 /* Video Overlay */
@@ -294,131 +252,41 @@ function updateCountdown() {
     }
 }
 
-// YouTube Video Background Script
-function initYouTubeBackground() {
-    const videoType = 'youtube';
-    const videoUrl = 'https://www.youtube.com/watch?v=KPHYe_QNjcg';
+// Initialize video background
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing video background...'); // Debug log
     
-    if (videoType === 'youtube' && videoUrl) {
-        // Extract YouTube video ID
-        const videoId = extractYouTubeId(videoUrl);
-        console.log('Video ID:', videoId); // Debug log
+    // Set up local video
+    const localVideo = document.querySelector('.gh-video-bg');
+    if (localVideo) {
+        console.log('Local MP4 video detected, setting up video event handlers'); // Debug log
         
-        if (videoId) {
-            // Check if YouTube API is already loaded
-            if (typeof YT === 'undefined' || !YT.Player) {
-                console.log('Loading YouTube API...'); // Debug log
-                
-                // Load YouTube API
-                const tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/iframe_api";
-                const firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                
-                // Wait for API to load
-                window.onYouTubeIframeAPIReady = function() {
-                    console.log('YouTube API loaded successfully'); // Debug log
-                    setTimeout(() => createYouTubePlayer(videoId), 100);
-                };
-            } else {
-                console.log('YouTube API already loaded'); // Debug log
-                setTimeout(() => createYouTubePlayer(videoId), 100);
-            }
-        }
-    }
-}
-
-function createYouTubePlayer(videoId) {
-    console.log('Creating YouTube player with ID:', videoId); // Debug log
-    
-    // Define the time segment to loop (in seconds)
-    const startTime = 45; // 0:45
-    const endTime = 83;   // 1:24
-    let player;
-    
-    try {
-        player = new YT.Player('youtube-bg', {
-            height: '100%',
-            width: '100%',
-            videoId: videoId,
-            playerVars: {
-                autoplay: 1,
-                controls: 0,
-                disablekb: 1,
-                enablejsapi: 1,
-                loop: 1,
-                modestbranding: 1,
-                mute: 1,
-                playsinline: 1,
-                rel: 0,
-                showinfo: 0,
-                playlist: videoId,
-                iv_load_policy: 3,
-                fs: 0,
-                start: startTime, // Start at 0:45
-                cc_load_policy: 0,
-                color: 'white',
-                hl: 'en',
-                origin: window.location.origin,
-                widget_referrer: window.location.href,
-                host: 'https://www.youtube.com'
-            },
-            events: {
-                onReady: function(event) {
-                    console.log('YouTube player ready'); // Debug log
-                    try {
-                        event.target.playVideo();
-                        console.log('Play video command sent, starting at', startTime, 'seconds'); // Debug log
-                    } catch (error) {
-                        console.error('Error playing video:', error); // Debug log
-                    }
-                },
-                onStateChange: function(event) {
-                    console.log('Player state changed:', event.data); // Debug log
-                    
-                    // Check if video has reached the end time and restart the segment
-                    if (event.data === YT.PlayerState.PLAYING) {
-                        const currentTime = event.target.getCurrentTime();
-                        if (currentTime >= endTime) {
-                            console.log('Reached end time, restarting segment at', startTime, 'seconds'); // Debug log
-                            event.target.seekTo(startTime, true);
-                        }
-                    }
-                },
-                onError: function(event) {
-                    console.error('YouTube player error:', event.data); // Debug log
-                    // Error codes: 2 (invalid parameter), 5 (HTML5 player error), 100 (video not found), 101 (embed not allowed), 150 (embed not allowed)
-                }
-            }
+        // Set up success handler
+        localVideo.addEventListener('loadeddata', function() {
+            console.log('Local video loaded successfully'); // Debug log
         });
         
-        console.log('Player object created:', player); // Debug log
-        
-        // Set up a timer to check and restart the segment
-        setInterval(() => {
-            if (player && player.getCurrentTime) {
-                try {
-                    const currentTime = player.getCurrentTime();
-                    if (currentTime >= endTime) {
-                        console.log('Timer: Restarting segment at', startTime, 'seconds'); // Debug log
-                        player.seekTo(startTime, true);
-                    }
-                } catch (error) {
-                    // Player might not be ready yet
-                }
-            }
-        }, 1000); // Check every second
-        
-    } catch (error) {
-        console.error('Error creating YouTube player:', error); // Debug log
+        // Set up error handler
+        localVideo.addEventListener('error', function() {
+            console.error('Local video failed to load'); // Debug log
+        });
     }
-}
+});
 
-// Extract YouTube video ID from URL
-function extractYouTubeId(url) {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
-    return (match && match[2].length === 11) ? match[2] : null;
+// Alternative initialization if DOMContentLoaded already fired
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        const localVideo = document.querySelector('.gh-video-bg');
+        if (localVideo) {
+            console.log('Local video found and ready'); // Debug log
+        }
+    });
+} else {
+    // DOM is already loaded
+    const localVideo = document.querySelector('.gh-video-bg');
+    if (localVideo) {
+        console.log('Local video found and ready'); // Debug log
+    }
 }
 
 // Update countdown every second
@@ -426,57 +294,4 @@ setInterval(updateCountdown, 1000);
 
 // Initial call to set the countdown immediately
 updateCountdown();
-
-// Initialize video background
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing video background...'); // Debug log
-    
-    // Set up local video with fallback to YouTube
-    const localVideo = document.querySelector('.gh-video-bg');
-    if (localVideo) {
-        console.log('Local MP4 video detected, setting up video event handlers'); // Debug log
-        
-        // Set up error handling for local video
-        localVideo.addEventListener('error', function() {
-            console.log('Local video failed to load, falling back to YouTube'); // Debug log
-            showYouTubeFallback();
-        });
-        
-        // Set up success handler
-        localVideo.addEventListener('loadeddata', function() {
-            console.log('Local video loaded successfully'); // Debug log
-        });
-    } else {
-        // No local video found, show YouTube
-        showYouTubeFallback();
-    }
-});
-
-function showYouTubeFallback() {
-    const youtubeContainer = document.getElementById('youtube-bg');
-    if (youtubeContainer) {
-        youtubeContainer.style.display = 'block';
-        console.log('Showing YouTube fallback'); // Debug log
-        
-        setTimeout(() => {
-            initYouTubeBackground();
-        }, 500);
-    }
-}
-
-// Alternative initialization if DOMContentLoaded already fired
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-        const localVideo = document.querySelector('.gh-video-bg');
-        if (!localVideo) {
-            showYouTubeFallback();
-        }
-    });
-} else {
-    // DOM is already loaded
-    const localVideo = document.querySelector('.gh-video-bg');
-    if (!localVideo) {
-        showYouTubeFallback();
-    }
-}
 </script> 
