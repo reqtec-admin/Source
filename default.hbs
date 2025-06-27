@@ -80,6 +80,10 @@
     
     {{> "components/navigation" navigationLayout=@custom.navigation_layout}}
 
+    {{#is "home"}}
+        {{> "components/hero"}}
+    {{/is}}
+
     {{{body}}}
     
     {{> "components/footer"}}

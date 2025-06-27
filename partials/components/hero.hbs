@@ -1,0 +1,482 @@
+{{!-- Hero Section Component --}}
+<section class="gh-hero">
+    <!-- Video Background -->
+    <div class="gh-hero-video-bg">
+        <!-- Local MP4 Video Background from Theme Assets -->
+        <video class="gh-video-bg" autoplay muted loop playsinline>
+            <source src="{{asset "video/hero-background.mp4"}}" type="video/mp4">
+        </video>
+        
+        <!-- YouTube Video Background Container - Fallback -->
+        <div id="youtube-bg" class="gh-video-container" style="display: none;"></div>
+    </div>
+    
+    <!-- Video Overlay -->
+    <div class="gh-hero-overlay"></div>
+    
+    <div class="gh-container">
+        <div class="gh-hero-content">
+            <div class="gh-hero-text">
+                <h1 class="gh-hero-title">
+                    Welcome to {{@site.title}}
+
+                </h1>
+                <p class="gh-hero-description">
+                    Discover amazing content and insights that matter to you.
+                </p>
+                
+                <!-- Countdown Timer -->
+                <div class="gh-countdown">
+                    <h2 class="gh-countdown-title">Countdown to July 4, 2026</h2>
+                    <div class="gh-countdown-timer">
+                        <div class="gh-countdown-item">
+                            <span class="gh-countdown-number" id="days">00</span>
+                            <span class="gh-countdown-label">Days</span>
+                        </div>
+                        <div class="gh-countdown-item">
+                            <span class="gh-countdown-number" id="hours">00</span>
+                            <span class="gh-countdown-label">Hours</span>
+                        </div>
+                        <div class="gh-countdown-item">
+                            <span class="gh-countdown-number" id="minutes">00</span>
+                            <span class="gh-countdown-label">Minutes</span>
+                        </div>
+                        <div class="gh-countdown-item">
+                            <span class="gh-countdown-number" id="seconds">00</span>
+                            <span class="gh-countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="gh-hero-description">
+                    Help us reach 1 million Americans to improve their health by July 4, 2026.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+/* Import Digital Clock Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+.gh-hero {
+    position: relative;
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Video Background Styles */
+.gh-hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.gh-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gh-video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#youtube-bg {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    pointer-events: none;
+}
+
+#youtube-bg iframe {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    pointer-events: none;
+}
+
+/* Hide YouTube player elements */
+#youtube-bg .ytp-title,
+#youtube-bg .ytp-show-cards-title,
+#youtube-bg .ytp-watermark,
+#youtube-bg .ytp-pause-overlay,
+#youtube-bg .ytp-chrome-top,
+#youtube-bg .ytp-chrome-bottom,
+#youtube-bg .ytp-gradient-top,
+#youtube-bg .ytp-gradient-bottom {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Additional iframe-specific hiding */
+#youtube-bg iframe .ytp-title,
+#youtube-bg iframe .ytp-show-cards-title,
+#youtube-bg iframe .ytp-watermark,
+#youtube-bg iframe .ytp-pause-overlay {
+    display: none !important;
+}
+
+/* Video Overlay */
+.gh-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(49, 56, 60, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 2;
+}
+
+.gh-hero .gh-container {
+    position: relative;
+    z-index: 3;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    width: 100%;
+}
+
+.gh-hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .gh-hero-content {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+}
+
+.gh-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .gh-hero-title {
+        font-size: 3rem;
+    }
+}
+
+.gh-hero-description {
+    font-size: 1.75rem;
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .gh-hero-description {
+        font-size: 2rem;
+    }
+}
+
+/* Countdown Timer Styles */
+.gh-countdown {
+    margin: 2rem 0;
+}
+
+.gh-countdown-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    opacity: 0.9;
+}
+
+.gh-countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .gh-countdown-timer {
+        justify-content: flex-start;
+    }
+}
+
+.gh-countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.gh-countdown-number {
+    font-family: 'Orbitron', monospace;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    min-width: 80px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+    .gh-countdown-number {
+        font-size: 3.5rem;
+        min-width: 100px;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+.gh-countdown-label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Fallback colors if CSS variables aren't defined */
+</style>
+
+<script>
+// Countdown Timer Script
+function updateCountdown() {
+    const targetDate = new Date('July 4, 2026 00:00:00').getTime();
+    const now = new Date().getTime();
+    const timeDifference = targetDate - now;
+
+    if (timeDifference > 0) {
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        // Update the display
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    } else {
+        // Countdown has ended
+        document.getElementById('days').textContent = '00';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+    }
+}
+
+// YouTube Video Background Script
+function initYouTubeBackground() {
+    const videoType = 'youtube';
+    const videoUrl = 'https://www.youtube.com/watch?v=KPHYe_QNjcg';
+    
+    if (videoType === 'youtube' && videoUrl) {
+        // Extract YouTube video ID
+        const videoId = extractYouTubeId(videoUrl);
+        console.log('Video ID:', videoId); // Debug log
+        
+        if (videoId) {
+            // Check if YouTube API is already loaded
+            if (typeof YT === 'undefined' || !YT.Player) {
+                console.log('Loading YouTube API...'); // Debug log
+                
+                // Load YouTube API
+                const tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                const firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                
+                // Wait for API to load
+                window.onYouTubeIframeAPIReady = function() {
+                    console.log('YouTube API loaded successfully'); // Debug log
+                    setTimeout(() => createYouTubePlayer(videoId), 100);
+                };
+            } else {
+                console.log('YouTube API already loaded'); // Debug log
+                setTimeout(() => createYouTubePlayer(videoId), 100);
+            }
+        }
+    }
+}
+
+function createYouTubePlayer(videoId) {
+    console.log('Creating YouTube player with ID:', videoId); // Debug log
+    
+    // Define the time segment to loop (in seconds)
+    const startTime = 45; // 0:45
+    const endTime = 83;   // 1:24
+    let player;
+    
+    try {
+        player = new YT.Player('youtube-bg', {
+            height: '100%',
+            width: '100%',
+            videoId: videoId,
+            playerVars: {
+                autoplay: 1,
+                controls: 0,
+                disablekb: 1,
+                enablejsapi: 1,
+                loop: 1,
+                modestbranding: 1,
+                mute: 1,
+                playsinline: 1,
+                rel: 0,
+                showinfo: 0,
+                playlist: videoId,
+                iv_load_policy: 3,
+                fs: 0,
+                start: startTime, // Start at 0:45
+                cc_load_policy: 0,
+                color: 'white',
+                hl: 'en',
+                origin: window.location.origin,
+                widget_referrer: window.location.href,
+                host: 'https://www.youtube.com'
+            },
+            events: {
+                onReady: function(event) {
+                    console.log('YouTube player ready'); // Debug log
+                    try {
+                        event.target.playVideo();
+                        console.log('Play video command sent, starting at', startTime, 'seconds'); // Debug log
+                    } catch (error) {
+                        console.error('Error playing video:', error); // Debug log
+                    }
+                },
+                onStateChange: function(event) {
+                    console.log('Player state changed:', event.data); // Debug log
+                    
+                    // Check if video has reached the end time and restart the segment
+                    if (event.data === YT.PlayerState.PLAYING) {
+                        const currentTime = event.target.getCurrentTime();
+                        if (currentTime >= endTime) {
+                            console.log('Reached end time, restarting segment at', startTime, 'seconds'); // Debug log
+                            event.target.seekTo(startTime, true);
+                        }
+                    }
+                },
+                onError: function(event) {
+                    console.error('YouTube player error:', event.data); // Debug log
+                    // Error codes: 2 (invalid parameter), 5 (HTML5 player error), 100 (video not found), 101 (embed not allowed), 150 (embed not allowed)
+                }
+            }
+        });
+        
+        console.log('Player object created:', player); // Debug log
+        
+        // Set up a timer to check and restart the segment
+        setInterval(() => {
+            if (player && player.getCurrentTime) {
+                try {
+                    const currentTime = player.getCurrentTime();
+                    if (currentTime >= endTime) {
+                        console.log('Timer: Restarting segment at', startTime, 'seconds'); // Debug log
+                        player.seekTo(startTime, true);
+                    }
+                } catch (error) {
+                    // Player might not be ready yet
+                }
+            }
+        }, 1000); // Check every second
+        
+    } catch (error) {
+        console.error('Error creating YouTube player:', error); // Debug log
+    }
+}
+
+// Extract YouTube video ID from URL
+function extractYouTubeId(url) {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initial call to set the countdown immediately
+updateCountdown();
+
+// Initialize video background
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing video background...'); // Debug log
+    
+    // Set up local video with fallback to YouTube
+    const localVideo = document.querySelector('.gh-video-bg');
+    if (localVideo) {
+        console.log('Local MP4 video detected, setting up video event handlers'); // Debug log
+        
+        // Set up error handling for local video
+        localVideo.addEventListener('error', function() {
+            console.log('Local video failed to load, falling back to YouTube'); // Debug log
+            showYouTubeFallback();
+        });
+        
+        // Set up success handler
+        localVideo.addEventListener('loadeddata', function() {
+            console.log('Local video loaded successfully'); // Debug log
+        });
+    } else {
+        // No local video found, show YouTube
+        showYouTubeFallback();
+    }
+});
+
+function showYouTubeFallback() {
+    const youtubeContainer = document.getElementById('youtube-bg');
+    if (youtubeContainer) {
+        youtubeContainer.style.display = 'block';
+        console.log('Showing YouTube fallback'); // Debug log
+        
+        setTimeout(() => {
+            initYouTubeBackground();
+        }, 500);
+    }
+}
+
+// Alternative initialization if DOMContentLoaded already fired
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        const localVideo = document.querySelector('.gh-video-bg');
+        if (!localVideo) {
+            showYouTubeFallback();
+        }
+    });
+} else {
+    // DOM is already loaded
+    const localVideo = document.querySelector('.gh-video-bg');
+    if (!localVideo) {
+        showYouTubeFallback();
+    }
+}
+</script> 
