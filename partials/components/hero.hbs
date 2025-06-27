@@ -4,8 +4,8 @@
     <div class="gh-hero-video-bg">
         <!-- Local MP4 Video Background from Theme Assets -->
         <video class="gh-video-bg" autoplay muted loop playsinline>
-            <source src="{{asset "video/hero-background.mp4"}}" type="video/mp4">
             <source src="/content/media/2025/06/hero-background.mp4" type="video/mp4">
+            <source src="{{asset "video/hero-background.mp4"}}" type="video/mp4">
         </video>
     </div>
     
@@ -20,7 +20,7 @@
 
                 </h1>
                 <p class="gh-hero-description">
-                    Discover amazing content and insights that matter to you.
+                    A Stronger America Needs a Stronger You.
                 </p>
                 
                 <!-- Countdown Timer -->
@@ -47,7 +47,8 @@
                 </div>
                 
                 <p class="gh-hero-description">
-                    Help us reach 1 million Americans to improve their health by July 4, 2026.
+                    Help us reach 1 million Americans to improve their health by
+                    <b>July 4, 2026</b>.    
                 </p>
 
             </div>
@@ -110,8 +111,21 @@
     z-index: 3;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 var(--container-padding);
+    padding: 0 1.5rem;
     width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .gh-hero .gh-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gh-hero .gh-container {
+        padding: 0 var(--container-padding);
+    }
 }
 
 .gh-hero-content {
@@ -120,12 +134,14 @@
     gap: 2rem;
     align-items: center;
     text-align: center;
+    padding: 2rem 0;
 }
 
 @media (min-width: 768px) {
     .gh-hero-content {
         grid-template-columns: 1fr 1fr;
         text-align: left;
+        padding: 0;
     }
 }
 
