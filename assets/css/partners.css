@@ -43,8 +43,8 @@
 }
 
 .gh-footer-partner-logo {
-    max-width: 80px;
-    max-height: 40px;
+    max-width: 120px;
+    max-height: 80px;
     width: auto;
     height: auto;
     margin-bottom: 12px;
@@ -58,7 +58,7 @@
 
 .gh-footer-partner-name {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     line-height: 1.3;
