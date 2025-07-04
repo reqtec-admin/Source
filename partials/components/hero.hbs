@@ -62,6 +62,10 @@
 <style>
 /* Import Digital Clock Font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+/* Import LCD/Digital Clock Font */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400&display=swap');
+/* Import Alternative Digital Font */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 .gh-hero {
     position: relative;
@@ -148,10 +152,13 @@
 }
 
 .gh-hero-title {
+    font-family: 'Share Tech Mono', monospace;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0 0 1rem 0;
     line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 @media (min-width: 768px) {
@@ -207,9 +214,9 @@
 }
 
 .gh-countdown-number {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Share Tech Mono', monospace;
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 400;
     line-height: 1;
     background: rgba(255, 255, 255, 0.2);
     padding: 0.5rem 1rem;
