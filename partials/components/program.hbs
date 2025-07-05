@@ -1,0 +1,479 @@
+{{!-- Program Section Component --}}
+<section class="gh-program">
+    <div class="gh-container">
+        <div class="gh-program-header">
+            <h2 class="gh-program-title">The Commit 250 Program</h2>
+            <p class="gh-program-subtitle">The Commit 250 Program is a comprehensive health program 
+                meticulously crafted to guide users through an enriching journey of personal transformation. 
+            First, it's important to understand that the program is <b>not a diet or a workout plan</b>. It's a resource
+                to help you achieve your goals by providing discipline, community, education, and accountability.
+                Read about the <a href="/what-we-are-not">What We Are Not</a> to learn more.
+            </p>
+            <p class="gh-program-subtitle">
+                This program integrates:
+                <ul>
+                    <li>intentional gratitude for mental health</li>
+                    <li>scheduled rest and recovery</li>
+                    <li>suggested physical training options</li>
+                    <li>suggested diet options</li>
+                    <li>health education and resources</li>
+                    <li>community and accountability</li>
+                </ul>
+            </p>
+            <p class="gh-program-subtitle">  
+                The program is firmly grounded in the principles of habit formation, as outlined by Charles Duhigg in his seminal work, 
+                <a href="https://www.amazon.com/Power-Habit-What-Life-Business/dp/081298160X" target="_blank"></a>The Power of Habit</a> (Duhigg, 2012), 
+                and draws heavily on the behavioral psychology insights provided by 
+                <a href="https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299" target="_blank">Atomic Habits</a> (Clear, 2018). 
+            </p>
+            <p class="gh-program-subtitle">
+                By emphasizing daily practice and incremental progress, the program aims to foster lasting behavioral change using daily reminders
+                and notifications empowering users to achieve their personal development goals.
+            </p>
+            <p class="gh-program-subtitle">
+                With 250 days of training available, the program is designed to be flexible and adaptable to your needs, while holding you accountable.
+            </p>
+        </div>
+        
+        <div class="gh-program-accordion">
+            <button class="gh-accordion-toggle" id="inspiration-accordion-toggle">
+                <span class="gh-accordion-title">The Inspiration</span>
+                <span class="gh-accordion-icon">▼</span>
+            </button>
+            <div class="gh-accordion-content" id="inspiration-accordion-content">
+                <div class="gh-inspiration-content">
+                    <p>Content for The Inspiration section will go here...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gh-program-accordion">
+            <button class="gh-accordion-toggle" id="design-accordion-toggle">
+                <span class="gh-accordion-title">The Design</span>
+                <span class="gh-accordion-icon">▼</span>
+            </button>
+            <div class="gh-accordion-content" id="design-accordion-content">
+                <div class="gh-design-content">
+                    <p>Content for The Design section will go here...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gh-program-accordion">
+            <button class="gh-accordion-toggle" id="structure-accordion-toggle">
+                <span class="gh-accordion-title">The Structure</span>
+                <span class="gh-accordion-icon">▼</span>
+            </button>
+            <div class="gh-accordion-content" id="structure-accordion-content">
+                <div class="gh-program-content" id="program-content">
+                    {{!-- All sections (evolutions + final) will be populated by JavaScript from program.json --}}
+                    <div class="gh-evolution-card" data-evolution="0">
+                        <div class="gh-evolution-content">
+                            <div class="gh-evolution-image">
+                                <div class="gh-evolution-placeholder">Loading...</div>
+                            </div>
+                            <div class="gh-evolution-text">
+                                <h3 class="gh-evolution-title">Loading...</h3>
+                                <p class="gh-evolution-description">Loading program data...</p>
+                                <span class="gh-evolution-duration">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.gh-program {
+    background: var(--background-color);
+    color: var(--color-primary-text);
+    padding: 4rem 0;
+    position: relative;
+}
+
+.gh-program .gh-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .gh-program .gh-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gh-program .gh-container {
+        padding: 0 var(--container-padding);
+    }
+}
+
+.gh-program-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .gh-program-header {
+        text-align: left;
+    }
+}
+
+.gh-program-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--color-primary-text);
+}
+
+@media (min-width: 768px) {
+    .gh-program-title {
+        font-size: 4.5rem;
+    }
+}
+
+.gh-program-subtitle {
+    font-size: 1.8rem;
+    opacity: 0.8;
+    margin: 0;
+    color: var(--color-secondary-text);
+    line-height: 1.6;
+}
+
+.gh-program-subtitle ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.gh-program-subtitle li {
+    color: inherit;
+    margin-bottom: 0.5rem;
+    opacity: inherit;
+}
+
+/* Accordion Styles */
+.gh-program-accordion {
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 3rem;
+}
+
+.gh-accordion-toggle {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--color-primary-text);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.gh-accordion-toggle:hover {
+    color: var(--ghost-accent-color);
+}
+
+.gh-accordion-toggle:hover .gh-accordion-icon {
+    color: var(--ghost-accent-color);
+}
+
+.gh-accordion-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.gh-accordion-icon {
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    color: var(--color-secondary-text);
+    font-weight: 400;
+}
+
+.gh-accordion-toggle.active .gh-accordion-icon {
+    transform: rotate(180deg);
+    color: var(--ghost-accent-color);
+}
+
+.gh-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.gh-accordion-content.active {
+    max-height: 2000px;
+    padding: 2rem 0;
+}
+
+.gh-program-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Evolution Cards */
+.gh-evolution-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.gh-evolution-card:nth-child(1) { animation-delay: 0.1s; }
+.gh-evolution-card:nth-child(2) { animation-delay: 0.2s; }
+.gh-evolution-card:nth-child(3) { animation-delay: 0.3s; }
+.gh-evolution-card:nth-child(4) { animation-delay: 0.4s; }
+.gh-evolution-card:nth-child(5) { animation-delay: 0.5s; }
+.gh-evolution-card:nth-child(6) { animation-delay: 0.6s; }
+.gh-evolution-card:nth-child(7) { animation-delay: 0.7s; }
+
+.gh-evolution-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.gh-evolution-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .gh-evolution-content {
+        grid-template-columns: 200px 1fr;
+        gap: 2rem;
+    }
+}
+
+.gh-evolution-image {
+    text-align: center;
+}
+
+.gh-evolution-img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .gh-evolution-img {
+        max-width: 200px;
+    }
+}
+
+.gh-evolution-text {
+    flex: 1;
+}
+
+.gh-evolution-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: var(--color-primary-text);
+}
+
+@media (min-width: 768px) {
+    .gh-evolution-title {
+        font-size: 2.5rem;
+    }
+}
+
+.gh-evolution-description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    color: var(--color-secondary-text);
+}
+
+@media (min-width: 768px) {
+    .gh-evolution-description {
+        font-size: 1.6rem;
+    }
+}
+
+.gh-evolution-duration {
+    display: inline-block;
+    background: rgba(var(--ghost-accent-color-rgb), 0.1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--ghost-accent-color);
+}
+
+/* Final Section */
+.gh-final-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.gh-final-section:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gh-final-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .gh-final-content {
+        grid-template-columns: 250px 1fr;
+        gap: 2rem;
+    }
+}
+
+.gh-final-image {
+    text-align: center;
+}
+
+.gh-final-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .gh-final-img {
+        max-width: 250px;
+    }
+}
+
+.gh-final-text {
+    flex: 1;
+}
+
+.gh-final-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--color-primary-text);
+}
+
+@media (min-width: 768px) {
+    .gh-final-title {
+        font-size: 3rem;
+    }
+}
+
+.gh-final-description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    color: var(--color-secondary-text);
+}
+
+@media (min-width: 768px) {
+    .gh-final-description {
+        font-size: 1.8rem;
+    }
+}
+
+.gh-final-duration {
+    display: inline-block;
+    background: rgba(var(--ghost-accent-color-rgb), 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ghost-accent-color);
+    border: 1px solid rgba(var(--ghost-accent-color-rgb), 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Intersection Observer Animation */
+.gh-evolution-card.animate,
+.gh-final-section.animate {
+    animation: fadeInUp 0.6s ease forwards;
+}
+</style>
+
+<script>
+// Accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to handle accordion toggle
+    function setupAccordion(toggleId, contentId) {
+        const accordionToggle = document.getElementById(toggleId);
+        const accordionContent = document.getElementById(contentId);
+        
+        if (accordionToggle && accordionContent) {
+            accordionToggle.addEventListener('click', function() {
+                accordionToggle.classList.toggle('active');
+                accordionContent.classList.toggle('active');
+            });
+        }
+    }
+    
+    // Setup all accordion sections
+    setupAccordion('inspiration-accordion-toggle', 'inspiration-accordion-content');
+    setupAccordion('design-accordion-toggle', 'design-accordion-content');
+    setupAccordion('structure-accordion-toggle', 'structure-accordion-content');
+});
+
+// Intersection Observer for scroll animations
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all evolution cards and final section
+    const cards = document.querySelectorAll('.gh-evolution-card, .gh-final-section');
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+});
+</script> 

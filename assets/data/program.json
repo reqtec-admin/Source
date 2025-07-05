@@ -1,0 +1,60 @@
+{
+    "sections": [
+        {
+            "id": 1,
+            "title": "Training Evolution 1",
+            "description": "Foundation building and mindset development. Learn the core principles that will guide your health transformation journey.",
+            "duration": "4 weeks",
+            "image": "/assets/images/evolution-1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Training Evolution 2", 
+            "description": "Nutrition fundamentals and meal planning strategies. Discover how to fuel your body for optimal performance.",
+            "duration": "4 weeks",
+            "image": "/assets/images/evolution-2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Training Evolution 3",
+            "description": "Strength training basics and form mastery. Build a solid foundation of movement patterns and strength.",
+            "duration": "4 weeks", 
+            "image": "/assets/images/evolution-3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Training Evolution 4",
+            "description": "Cardiovascular conditioning and endurance building. Improve your stamina and overall fitness levels.",
+            "duration": "4 weeks",
+            "image": "/assets/images/evolution-4.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Training Evolution 5",
+            "description": "Recovery and mobility enhancement. Learn techniques to prevent injury and improve flexibility.",
+            "duration": "4 weeks",
+            "image": "/assets/images/evolution-5.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Training Evolution 6",
+            "description": "Advanced training techniques and progression strategies. Take your fitness to the next level.",
+            "duration": "4 weeks",
+            "image": "/assets/images/evolution-6.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Training Evolution 7",
+            "description": "Peak performance and goal achievement. Master the skills needed to reach your ultimate health goals.",
+            "duration": "4 weeks",
+            "image": "/assets/images/evolution-7.jpg"
+        },
+        {
+            "id": 8,
+            "title": "The Final 5",
+            "description": "The ultimate challenge that brings together everything you've learned. This is where transformation happens.",
+            "duration": "5 days",
+            "image": "/assets/images/final-5.jpg"
+        }
+    ]
+} 

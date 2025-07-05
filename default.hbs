@@ -16,6 +16,7 @@
 
     {{!-- Theme assets - use the {{asset}} helper to reference styles & scripts, this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}">
+    <script src="{{asset "js/program-loader.js"}}"></script>
 
     {{!-- Custom background color --}}
     <style>
@@ -82,6 +83,7 @@
 
     {{#is "home"}}
         {{> "components/hero"}}
+        {{> "components/program"}}
     {{/is}}
 
     {{{body}}}
