@@ -127,7 +127,7 @@
         {
             "id": 4,
             "title": "What if I miss a day?",
-            "description": "Life happens! The program is designed to be forgiving. Simply pick up where you left off and continue your journey.",
+            "description": "Life happens! The program is designed to be forgiving. Use your 3 day grace period and gain the flexibility you need.",
             "url": "/getting-started",
             "image": "/assets/images/faq-missed-day.jpg",
             "duration": ""
@@ -139,6 +139,16 @@
             "url": "/community",
             "image": "/assets/images/faq-community.jpg",
             "duration": ""
+        },
+        {
+            "id": 5,
+            "title": "Is this another biohacking program, body building program?",
+            "description": "No. Read about the What We Are Not.",
+            "url": "/what-we-are-not",
+            "image": "/assets/images/faq-what-we-are-not.jpg",
+            "duration": ""
         }
+
+        
     ]
 } 
