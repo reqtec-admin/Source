@@ -1,60 +1,144 @@
 {
-    "sections": [
+    "program_design": [
+        {
+            "id": 1,
+            "title": "Habit Formation",
+            "description": "Built on proven behavioral science principles from Charles Duhigg's The Power of Habit and James Clear's Atomic Habits.",
+            "url": "https://www.amazon.com/Power-Habit-What-Life-Business/dp/081298160X",
+            "image": "/assets/images/design-habits.jpg",
+            "duration": ""
+        },
+        {
+            "id": 2,
+            "title": "Incremental Progress",
+            "description": "Small, sustainable changes that compound over time, focusing on consistency rather than perfection.",
+            "url": "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299",
+            "image": "/assets/images/design-progress.jpg",
+            "duration": ""
+        },
+        {
+            "id": 3,
+            "title": "Community Support",
+            "description": "Built-in accountability and support systems to help you stay motivated and on track with your goals.",
+            "url": "/community",
+            "image": "/assets/images/design-community.jpg",
+            "duration": ""
+        },
+        {
+            "id": 4,
+            "title": "Evidence-Based",
+            "description": "All recommendations and strategies are grounded in scientific research and proven methodologies.",
+            "url": "/research",
+            "image": "/assets/images/design-evidence.jpg",
+            "duration": ""
+        }
+    ],
+    "program_structure": [
         {
             "id": 1,
             "title": "Training Evolution 1",
             "description": "Foundation building and mindset development. Learn the core principles that will guide your health transformation journey.",
             "duration": "4 weeks",
-            "image": "/assets/images/evolution-1.jpg"
+            "image": "/assets/images/evolution-1.jpg",
+            "url": ""
         },
         {
             "id": 2,
             "title": "Training Evolution 2", 
             "description": "Nutrition fundamentals and meal planning strategies. Discover how to fuel your body for optimal performance.",
             "duration": "4 weeks",
-            "image": "/assets/images/evolution-2.jpg"
+            "image": "/assets/images/evolution-2.jpg",
+            "url": ""
         },
         {
             "id": 3,
             "title": "Training Evolution 3",
             "description": "Strength training basics and form mastery. Build a solid foundation of movement patterns and strength.",
             "duration": "4 weeks", 
-            "image": "/assets/images/evolution-3.jpg"
+            "image": "/assets/images/evolution-3.jpg",
+            "url": ""
         },
         {
             "id": 4,
             "title": "Training Evolution 4",
             "description": "Cardiovascular conditioning and endurance building. Improve your stamina and overall fitness levels.",
             "duration": "4 weeks",
-            "image": "/assets/images/evolution-4.jpg"
+            "image": "/assets/images/evolution-4.jpg",
+            "url": ""
         },
         {
             "id": 5,
             "title": "Training Evolution 5",
             "description": "Recovery and mobility enhancement. Learn techniques to prevent injury and improve flexibility.",
             "duration": "4 weeks",
-            "image": "/assets/images/evolution-5.jpg"
+            "image": "/assets/images/evolution-5.jpg",
+            "url": ""
         },
         {
             "id": 6,
             "title": "Training Evolution 6",
             "description": "Advanced training techniques and progression strategies. Take your fitness to the next level.",
             "duration": "4 weeks",
-            "image": "/assets/images/evolution-6.jpg"
+            "image": "/assets/images/evolution-6.jpg",
+            "url": ""
         },
         {
             "id": 7,
             "title": "Training Evolution 7",
             "description": "Peak performance and goal achievement. Master the skills needed to reach your ultimate health goals.",
             "duration": "4 weeks",
-            "image": "/assets/images/evolution-7.jpg"
+            "image": "/assets/images/evolution-7.jpg",
+            "url": ""
         },
         {
             "id": 8,
             "title": "The Final 5",
             "description": "The ultimate challenge that brings together everything you've learned. This is where transformation happens.",
             "duration": "5 days",
-            "image": "/assets/images/final-5.jpg"
+            "image": "/assets/images/final-5.jpg",
+            "url": ""
+        }
+    ],
+    "program_faq": [
+        {
+            "id": 1,
+            "title": "Is this a diet program?",
+            "description": "No, Commit 250 is not a diet program. We provide education and resources to help you make informed decisions about nutrition, but we don't prescribe specific meal plans.",
+            "url": "/what-we-are-not",
+            "image": "/assets/images/faq-diet.jpg",
+            "duration": ""
+        },
+        {
+            "id": 2,
+            "title": "Do I need to work out every day?",
+            "description": "The program is designed to be flexible. We provide suggested training options, but you can adapt them to your schedule and fitness level.",
+            "url": "/training-options",
+            "image": "/assets/images/faq-workout.jpg",
+            "duration": ""
+        },
+        {
+            "id": 3,
+            "title": "How long does the program take?",
+            "description": "The program is designed for 250 days, but you can progress at your own pace. The key is consistency, not speed.",
+            "url": "/program-structure",
+            "image": "/assets/images/faq-timeline.jpg",
+            "duration": ""
+        },
+        {
+            "id": 4,
+            "title": "What if I miss a day?",
+            "description": "Life happens! The program is designed to be forgiving. Simply pick up where you left off and continue your journey.",
+            "url": "/getting-started",
+            "image": "/assets/images/faq-missed-day.jpg",
+            "duration": ""
+        },
+        {
+            "id": 5,
+            "title": "Is there community support?",
+            "description": "Yes! We have a supportive community of like-minded individuals who are also on their health transformation journey.",
+            "url": "/community",
+            "image": "/assets/images/faq-community.jpg",
+            "duration": ""
         }
     ]
 } 

@@ -13,8 +13,10 @@ async function loadProgramData() {
         
         const data = await response.json();
         
-        // Populate all sections (including evolutions and final section)
-        populateAllSections(data.sections);
+        // Populate all sections
+        populateAllSections(data.program_structure);
+        populateDesignCards(data.program_design);
+        populateFaqCards(data.program_faq);
         
     } catch (error) {
         console.error('Error loading program data:', error);
@@ -42,10 +44,10 @@ function populateAllSections(sections) {
 function createSectionCard(section, index) {
     const card = document.createElement('div');
     
-    // Determine if this is the final section (ID 8) or a regular evolution
+    // Determine if this is the final section (ID 8) or a regular section
     if (section.id === 8) {
         card.className = 'gh-final-section';
-        card.setAttribute('data-evolution', section.id);
+        card.setAttribute('data-section', section.id);
         
         // Add animation delay based on ID
         card.style.animationDelay = `${section.id * 0.1}s`;
@@ -54,7 +56,7 @@ function createSectionCard(section, index) {
             <div class="gh-final-content">
                 <div class="gh-final-image">
                     <img src="${section.image}" alt="${section.title}" class="gh-final-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="gh-evolution-placeholder" style="display: none;">Final Image</div>
+                    <div class="gh-section-placeholder" style="display: none;">Final Image</div>
                 </div>
                 <div class="gh-final-text">
                     <h3 class="gh-final-title">${section.title}</h3>
@@ -64,26 +66,60 @@ function createSectionCard(section, index) {
             </div>
         `;
     } else {
-        card.className = 'gh-evolution-card';
-        card.setAttribute('data-evolution', section.id);
+        card.className = 'gh-section-card';
+        card.setAttribute('data-section', section.id);
         
         // Add animation delay based on ID
         card.style.animationDelay = `${section.id * 0.1}s`;
         
         card.innerHTML = `
-            <div class="gh-evolution-content">
-                <div class="gh-evolution-image">
-                    <img src="${section.image}" alt="${section.title}" class="gh-evolution-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="gh-evolution-placeholder" style="display: none;">Image ${section.id}</div>
+            <div class="gh-section-content">
+                <div class="gh-section-image">
+                    <img src="${section.image}" alt="${section.title}" class="gh-section-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gh-section-placeholder" style="display: none;">Image ${section.id}</div>
                 </div>
-                <div class="gh-evolution-text">
-                    <h3 class="gh-evolution-title">${section.title}</h3>
-                    <p class="gh-evolution-description">${section.description}</p>
-                    <span class="gh-evolution-duration">${section.duration}</span>
+                <div class="gh-section-text">
+                    <h3 class="gh-section-title">${section.title}</h3>
+                    <p class="gh-section-description">${section.description}</p>
+                    <span class="gh-section-duration">${section.duration}</span>
                 </div>
             </div>
         `;
     }
     
     return card;
-} 
+}
+
+function populateDesignCards(designs) {
+    const designContainer = document.getElementById('design-cards');
+    if (!designContainer || !designs) return;
+    
+    // Clear existing content
+    designContainer.innerHTML = '';
+    
+    // Sort designs by ID to ensure proper order
+    const sortedDesigns = designs.sort((a, b) => a.id - b.id);
+    
+    // Create cards for all designs
+    sortedDesigns.forEach((design, index) => {
+        const card = createSectionCard(design, index);
+        designContainer.appendChild(card);
+    });
+}
+
+function populateFaqCards(faqs) {
+    const faqContainer = document.getElementById('faq-cards');
+    if (!faqContainer || !faqs) return;
+    
+    // Clear existing content
+    faqContainer.innerHTML = '';
+    
+    // Sort FAQs by ID to ensure proper order
+    const sortedFaqs = faqs.sort((a, b) => a.id - b.id);
+    
+    // Create cards for all FAQs
+    sortedFaqs.forEach((faq, index) => {
+        const card = createSectionCard(faq, index);
+        faqContainer.appendChild(card);
+    });
+}

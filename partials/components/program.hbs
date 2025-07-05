@@ -2,9 +2,22 @@
 <section class="gh-program">
     <div class="gh-container">
         <div class="gh-program-header">
+            <h2 class="gh-program-title">The Challenge</h2>
+            <p class="gh-program-subtitle">
+                Chronic diseases—heart disease, diabetes, obesity—drive 75% of the $4.5 trillion annual healthcare spend, 
+                fueling a national debt soaring past $33 trillion, with Medicare and Medicaid eating over 20% of federal budgets.
+                The <a href="/a-new-war-for-independence-reclaiming-americas-health">US Health Crisis</a> must be addressed one citizen at a time targeting the everyday American.
+                There are thousands of hours of education and workout programs available, but this can leave the average American overwhelmed and confused.
+                American's need practical, actionable, and sustainable solutions to improve their health.
+            </p>
+        </div>
+        
+        <div class="gh-program-divider"></div>
+        
+        <div class="gh-program-header">
             <h2 class="gh-program-title">The Commit 250 Program</h2>
             <p class="gh-program-subtitle">The Commit 250 Program is a comprehensive health program 
-                meticulously crafted to guide users through an enriching journey of personal transformation. 
+                meticulously crafted to guide users to build discipline and structure for lasting personal transformation. 
             First, it's important to understand that the program is <b>not a diet or a workout plan</b>. It's a resource
                 to help you achieve your goals by providing discipline, community, education, and accountability.
                 Read about the <a href="/what-we-are-not">What We Are Not</a> to learn more.
@@ -22,7 +35,7 @@
             </p>
             <p class="gh-program-subtitle">  
                 The program is firmly grounded in the principles of habit formation, as outlined by Charles Duhigg in his seminal work, 
-                <a href="https://www.amazon.com/Power-Habit-What-Life-Business/dp/081298160X" target="_blank"></a>The Power of Habit</a> (Duhigg, 2012), 
+                <a href="https://www.amazon.com/Power-Habit-What-Life-Business/dp/081298160X" target="_blank">The Power of Habit</a> (Duhigg, 2012), 
                 and draws heavily on the behavioral psychology insights provided by 
                 <a href="https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299" target="_blank">Atomic Habits</a> (Clear, 2018). 
             </p>
@@ -34,18 +47,7 @@
                 With 250 days of training available, the program is designed to be flexible and adaptable to your needs, while holding you accountable.
             </p>
         </div>
-        
-        <div class="gh-program-accordion">
-            <button class="gh-accordion-toggle" id="inspiration-accordion-toggle">
-                <span class="gh-accordion-title">The Inspiration</span>
-                <span class="gh-accordion-icon">▼</span>
-            </button>
-            <div class="gh-accordion-content" id="inspiration-accordion-content">
-                <div class="gh-inspiration-content">
-                    <p>Content for The Inspiration section will go here...</p>
-                </div>
-            </div>
-        </div>
+
 
         <div class="gh-program-accordion">
             <button class="gh-accordion-toggle" id="design-accordion-toggle">
@@ -53,8 +55,19 @@
                 <span class="gh-accordion-icon">▼</span>
             </button>
             <div class="gh-accordion-content" id="design-accordion-content">
-                <div class="gh-design-content">
-                    <p>Content for The Design section will go here...</p>
+                <div class="gh-program-content" id="design-cards">
+                    <div class="gh-section-card" data-section="0">
+                        <div class="gh-section-content">
+                            <div class="gh-section-image">
+                                <div class="gh-section-placeholder">Loading...</div>
+                            </div>
+                            <div class="gh-section-text">
+                                <h3 class="gh-section-title">Loading...</h3>
+                                <p class="gh-section-description">Loading program data...</p>
+                                <span class="gh-section-duration">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,22 +79,46 @@
             </button>
             <div class="gh-accordion-content" id="structure-accordion-content">
                 <div class="gh-program-content" id="program-content">
-                    {{!-- All sections (evolutions + final) will be populated by JavaScript from program.json --}}
-                    <div class="gh-evolution-card" data-evolution="0">
-                        <div class="gh-evolution-content">
-                            <div class="gh-evolution-image">
-                                <div class="gh-evolution-placeholder">Loading...</div>
+                    {{!-- All sections (sections + final) will be populated by JavaScript from program.json --}}
+                    <div class="gh-section-card" data-section="0">
+                        <div class="gh-section-content">
+                            <div class="gh-section-image">
+                                <div class="gh-section-placeholder">Loading...</div>
                             </div>
-                            <div class="gh-evolution-text">
-                                <h3 class="gh-evolution-title">Loading...</h3>
-                                <p class="gh-evolution-description">Loading program data...</p>
-                                <span class="gh-evolution-duration">Loading...</span>
+                            <div class="gh-section-text">
+                                <h3 class="gh-section-title">Loading...</h3>
+                                <p class="gh-section-description">Loading program data...</p>
+                                <span class="gh-section-duration">Loading...</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="gh-program-accordion">
+            <button class="gh-accordion-toggle" id="faq-accordion-toggle">
+                <span class="gh-accordion-title">Frequently Asked Questions</span>
+                <span class="gh-accordion-icon">▼</span>
+            </button>
+            <div class="gh-accordion-content" id="faq-accordion-content">
+                <div class="gh-program-content" id="faq-cards">
+                    <div class="gh-section-card" data-section="0">
+                        <div class="gh-section-content">
+                            <div class="gh-section-image">
+                                <div class="gh-section-placeholder">Loading...</div>
+                            </div>
+                            <div class="gh-section-text">
+                                <h3 class="gh-section-title">Loading...</h3>
+                                <p class="gh-section-description">Loading program data...</p>
+                                <span class="gh-section-duration">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -156,6 +193,12 @@
     opacity: inherit;
 }
 
+.gh-program-divider {
+    height: 1px;
+    background: var(--color-border);
+    margin: 3rem 0;
+}
+
 /* Accordion Styles */
 .gh-program-accordion {
     margin-top: 3rem;
@@ -222,8 +265,8 @@
     gap: 2rem;
 }
 
-/* Evolution Cards */
-.gh-evolution-card {
+/* section Cards */
+.gh-section-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 2rem;
@@ -235,21 +278,21 @@
     animation: fadeInUp 0.6s ease forwards;
 }
 
-.gh-evolution-card:nth-child(1) { animation-delay: 0.1s; }
-.gh-evolution-card:nth-child(2) { animation-delay: 0.2s; }
-.gh-evolution-card:nth-child(3) { animation-delay: 0.3s; }
-.gh-evolution-card:nth-child(4) { animation-delay: 0.4s; }
-.gh-evolution-card:nth-child(5) { animation-delay: 0.5s; }
-.gh-evolution-card:nth-child(6) { animation-delay: 0.6s; }
-.gh-evolution-card:nth-child(7) { animation-delay: 0.7s; }
+.gh-section-card:nth-child(1) { animation-delay: 0.1s; }
+.gh-section-card:nth-child(2) { animation-delay: 0.2s; }
+.gh-section-card:nth-child(3) { animation-delay: 0.3s; }
+.gh-section-card:nth-child(4) { animation-delay: 0.4s; }
+.gh-section-card:nth-child(5) { animation-delay: 0.5s; }
+.gh-section-card:nth-child(6) { animation-delay: 0.6s; }
+.gh-section-card:nth-child(7) { animation-delay: 0.7s; }
 
-.gh-evolution-card:hover {
+.gh-section-card:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.gh-evolution-content {
+.gh-section-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -257,17 +300,17 @@
 }
 
 @media (min-width: 768px) {
-    .gh-evolution-content {
+    .gh-section-content {
         grid-template-columns: 200px 1fr;
         gap: 2rem;
     }
 }
 
-.gh-evolution-image {
+.gh-section-image {
     text-align: center;
 }
 
-.gh-evolution-img {
+.gh-section-img {
     width: 100%;
     max-width: 180px;
     height: auto;
@@ -276,16 +319,16 @@
 }
 
 @media (min-width: 768px) {
-    .gh-evolution-img {
+    .gh-section-img {
         max-width: 200px;
     }
 }
 
-.gh-evolution-text {
+.gh-section-text {
     flex: 1;
 }
 
-.gh-evolution-title {
+.gh-section-title {
     font-size: 2.2rem;
     font-weight: 600;
     margin: 0 0 1rem 0;
@@ -293,12 +336,12 @@
 }
 
 @media (min-width: 768px) {
-    .gh-evolution-title {
+    .gh-section-title {
         font-size: 2.5rem;
     }
 }
 
-.gh-evolution-description {
+.gh-section-description {
     font-size: 1.4rem;
     line-height: 1.6;
     margin: 0 0 1rem 0;
@@ -306,12 +349,12 @@
 }
 
 @media (min-width: 768px) {
-    .gh-evolution-description {
+    .gh-section-description {
         font-size: 1.6rem;
     }
 }
 
-.gh-evolution-duration {
+.gh-section-duration {
     display: inline-block;
     background: rgba(var(--ghost-accent-color-rgb), 0.1);
     padding: 0.6rem 1.2rem;
@@ -427,7 +470,7 @@
 }
 
 /* Intersection Observer Animation */
-.gh-evolution-card.animate,
+.gh-section-card.animate,
 .gh-final-section.animate {
     animation: fadeInUp 0.6s ease forwards;
 }
@@ -450,9 +493,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Setup all accordion sections
-    setupAccordion('inspiration-accordion-toggle', 'inspiration-accordion-content');
     setupAccordion('design-accordion-toggle', 'design-accordion-content');
     setupAccordion('structure-accordion-toggle', 'structure-accordion-content');
+    setupAccordion('faq-accordion-toggle', 'faq-accordion-content');
 });
 
 // Intersection Observer for scroll animations
@@ -470,8 +513,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe all evolution cards and final section
-    const cards = document.querySelectorAll('.gh-evolution-card, .gh-final-section');
+    // Observe all section cards and final section
+    const cards = document.querySelectorAll('.gh-section-card, .gh-final-section');
     cards.forEach(card => {
         observer.observe(card);
     });
