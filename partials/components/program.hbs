@@ -96,17 +96,31 @@
 </section>
 
 <script>
-// Accordion functionality
+// Accordion functionality with dynamic height animation
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to handle accordion toggle
+    // Function to handle accordion toggle with dynamic height
     function setupAccordion(toggleId, contentId) {
         const accordionToggle = document.getElementById(toggleId);
         const accordionContent = document.getElementById(contentId);
         
         if (accordionToggle && accordionContent) {
             accordionToggle.addEventListener('click', function() {
-                accordionToggle.classList.toggle('active');
-                accordionContent.classList.toggle('active');
+                const isActive = accordionToggle.classList.contains('active');
+                
+                if (isActive) {
+                    // Closing accordion
+                    accordionToggle.classList.remove('active');
+                    accordionContent.classList.remove('active');
+                    accordionContent.style.maxHeight = '0px';
+                } else {
+                    // Opening accordion
+                    accordionToggle.classList.add('active');
+                    accordionContent.classList.add('active');
+                    
+                    // Calculate the actual content height
+                    const contentHeight = accordionContent.scrollHeight;
+                    accordionContent.style.maxHeight = contentHeight + 'px';
+                }
             });
         }
     }

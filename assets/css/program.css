@@ -123,19 +123,18 @@
 .gh-accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     border-bottom: 1px solid var(--color-border);
+    padding: 0;
 }
 
 .gh-accordion-content.active {
-    max-height: 6000px;
     padding: 2rem 0;
 }
 
 /* Mobile-specific accordion height fix */
 @media (max-width: 767px) {
     .gh-accordion-content.active {
-        max-height: none;
         overflow: visible;
     }
 }
@@ -180,12 +179,12 @@
 }
 
 /* When image is present, use two-column layout */
-.gh-section-content:has(.gh-section-image) {
+.gh-section-content.has-image {
     grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
-    .gh-section-content:has(.gh-section-image) {
+    .gh-section-content.has-image {
         grid-template-columns: 200px 1fr;
         gap: 2rem;
     }

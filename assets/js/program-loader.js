@@ -52,9 +52,11 @@ function createSectionCard(section, index) {
     // Add animation delay based on ID
     card.style.animationDelay = `${section.id * 0.1}s`;
 
-            card.innerHTML = `
-            <div class="gh-section-content">
-                ${section.image && section.image.trim() !== '' ? `
+            const hasImage = section.image && section.image.trim() !== '';
+        
+        card.innerHTML = `
+            <div class="gh-section-content ${hasImage ? 'has-image' : ''}">
+                ${hasImage ? `
                 <div class="gh-section-image">
                     <img src="${section.image}" alt="${section.title}" class="gh-section-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="gh-section-placeholder" style="display: none;"></div>
