@@ -128,7 +128,7 @@
 }
 
 .gh-accordion-content.active {
-    max-height: 2000px;
+    max-height: 6000px;
     padding: 2rem 0;
 }
 
