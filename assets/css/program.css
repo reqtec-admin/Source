@@ -132,6 +132,14 @@
     padding: 2rem 0;
 }
 
+/* Mobile-specific accordion height fix */
+@media (max-width: 767px) {
+    .gh-accordion-content.active {
+        max-height: none;
+        overflow: visible;
+    }
+}
+
 .gh-program-content {
     display: flex;
     flex-direction: column;
@@ -171,8 +179,13 @@
     align-items: center;
 }
 
+/* When image is present, use two-column layout */
+.gh-section-content:has(.gh-section-image) {
+    grid-template-columns: 1fr;
+}
+
 @media (min-width: 768px) {
-    .gh-section-content {
+    .gh-section-content:has(.gh-section-image) {
         grid-template-columns: 200px 1fr;
         gap: 2rem;
     }
