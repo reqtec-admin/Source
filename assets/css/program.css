@@ -1,8 +1,9 @@
 .gh-program {
     background: var(--background-color);
     color: var(--color-primary-text);
-    padding: 4rem 0;
+    padding: 4rem 0 6rem 0;
     position: relative;
+    clear: both;
 }
 
 .gh-program .gh-container {
@@ -126,6 +127,7 @@
     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     border-bottom: 1px solid var(--color-border);
     padding: 0;
+    position: relative;
 }
 
 .gh-accordion-content.active {
@@ -136,6 +138,27 @@
 @media (max-width: 767px) {
     .gh-accordion-content.active {
         overflow: visible;
+    }
+    
+    /* Ensure proper spacing and prevent overlap with magazine articles */
+    .gh-program {
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .gh-program-accordion {
+        margin-bottom: 2rem;
+    }
+    
+    .gh-accordion-content.active {
+        margin-bottom: 1rem;
+    }
+    
+    /* Ensure the program section doesn't interfere with the body content */
+    .gh-program + .gh-container {
+        position: relative;
+        z-index: 2;
     }
 }
 

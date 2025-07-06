@@ -2,14 +2,22 @@
     "program_design": [
         {
             "id": 1,
-            "title": "Daily Gratitude",
-            "description": "This is where WE ARE DIFFERENT. We challenge users to be intentional about gratitude. Through a Daily Gratitude exercise the user starts their day grounding themselves in appreciation for the abundance they have in their life. We focus on those that have given so much to make this great nation. There are repeated scientific studies showing the mental health benefits to practicing gratitude. You will read incredible historical accounts across America's most pivotal moments. Maybe you'll even learn a little history, but you will certainly gain an appreciation for the resilience and grit of those that have come before us.",
+            "title": "A 250 Day Commitment",
+            "description": "Before you run away at the prospect of 250 days of intense workouts, understand this program incorporates 7 training evolutions with 1 preparation week before each used for rest, recovery, and planning. The program is about building lasting change, not about quick fixes. We do not assign specific workouts but have suggested programs for each evolution so you don't have to worry about a trainer yelling at you for one more rep. It includes 3 day grace periods to allow for missed days and busy schedules. The key is to just keep after it. We chose 250 days because it aligns with the theme of our nation's 250th anniversary. If 250 days seems like too much, remember, many of us are willing to die for our family or nation, but are you willing to work hard for them? What are you willing to do to get your health in order, to inspire others, and to do your part to combat this health crisis? Sign up and we will give you a way to do something.",
             "url": "",
-            "image": "https://images.unsplash.com/photo-1609373119653-2b420e0b9acc?q=80&w=1634&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "image": "",
             "duration": ""
         },
         {
             "id": 2,
+            "title": "Daily Gratitude",
+            "description": "This is where WE ARE DIFFERENT. We challenge users to be intentional about gratitude. Through a Daily Gratitude exercise the user starts their day grounding themselves in appreciation for the abundance they have in their life. We focus on those that have given so much to make this great nation. There are repeated scientific studies showing the mental health benefits to practicing gratitude. You will read incredible historical accounts across America's most pivotal moments. Maybe you'll even learn a little history, but you will certainly gain an appreciation for the resilience and grit of those that have come before us.",
+            "url": "/the-power-of-gratitude",
+            "image": "https://images.unsplash.com/photo-1609373119653-2b420e0b9acc?q=80&w=1634&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "duration": ""
+        },
+        {
+            "id": 3,
             "title": "Preparation and Planning",
             "description": "Where planning lacks, convenience reigns. Americans are slaves to convenience because we do not plan. When we make choices out of convenience, often times we are not making healthy choices. Commit 250 has the user take actionable steps across the week to plan and prepare for the upcoming trainig evolution. This allows users to account for meal planning, kids' schedules, work, and other commitments.",
             "url": "",
@@ -17,7 +25,7 @@
             "duration": ""
         },
         {
-            "id": 3,
+            "id": 4,
             "title": "1 + 4 Training Design",
             "description": "This unique approach allows users to realistically achieve 250 days of training. Each prep week coincides with rest and recovery allowing users to learn the larger benefits of what is coming in the next training cycle. As an example, in one evolution users will schedule blood work if they do not have a recent test. They then proceed through the training evolution reading about each marker, its range, effects and ultimately what mitigations can be taken to improve that marker. Another evolution the same structured approach is taken with studying hormone health. During the 4 weeks of training, users have daily checklists to work through regarding exercise, nutrition, gratitude, and more. These checklists grow as users get more accustomed to the program.",
             "url": "",
@@ -25,7 +33,7 @@
             "duration": ""
         },
         {
-            "id": 4,
+            "id": 5,
             "title": "Habit Formation",
             "description": "The program is firmly grounded in the principles of habit formation, as outlined by Charles Duhigg in his seminal work, The Power of Habit (Duhigg, 2012), and draws heavily on the behavioral psychology insights provided by Atomic Habits (Clear, 2018). Using these and modern micro-learning practices we build lasting change through lasting habits.",
             "url": "",
@@ -33,7 +41,7 @@
             "duration": ""
         },
         {
-            "id": 5,
+            "id": 6,
             "title": "Incremental Progress",
             "description": "Small, sustainable changes that compound over time, focusing on consistency rather than perfection. We challenge users to keep the schedule and avoid missing a day to keep users on track. The goal is to build the discipline necessary to maintain a healthy lifestyle. By emphasizing daily practice and incremental progress, the program aims to foster lasting behavioral change using daily reminders and notifications empowering users to achieve their personal development goals.",
             "url": "",
@@ -41,7 +49,7 @@
             "duration": ""
         },
         {
-            "id": 6,
+            "id": 7,
             "title": "Targeted Health Education",
             "description": "Commit 250 provides short, micro-learning videos and articles that let users learn about their health daily. Each day of one of the evolutions blood test markers are studied in the context of what metabolic factors could be impacting that specific marker. Throughout the program we are educating users with short on-target education that is NOT a 2 hour podcast. We boil down the information for you.",
             "url": "",
@@ -49,7 +57,7 @@
             "duration": ""
         },
         {
-            "id": 7,
+            "id": 8,
             "title": "Community Support",
             "description": "Built-in accountability and support systems to help you stay motivated and on track with your goals. Users can stay connected with each other and share their progress.",
             "url": "",
@@ -57,7 +65,7 @@
             "duration": ""
         },
         {
-            "id": 8,
+            "id": 9,
             "title": "Evidence-Based",
             "description": "All recommendations and strategies are grounded in scientific research and proven methodologies. We provide links to the research and studies that support our recommendations.",
             "url": "",
@@ -65,7 +73,7 @@
             "duration": ""
         },
         {
-            "id": 9,
+            "id": 10,
             "title": "Non-Prescriptive",
             "description": "Everyone is different. Health is far more than diet and exercise. We provide a structure to build lasting habits. We will provide suggested diets and exercise programs, but what you pick is up to you. In the end, you must take on the consistency necessary to make the changes necessary and maintain them. We know that is done through positive habits, mental health, and a strong support system.",
             "url": "",
@@ -73,7 +81,7 @@
             "duration": ""
         },
         {
-            "id": 10,
+            "id": 11,
             "title": "Graduated Growth",
             "description": "With 250 days of training available, the program is designed to be flexible and adaptable to your needs, but it will add more each training evolution to learn more, train more, and become a better you. Just as everyone is different, most everyone has a different starting point. But our system is meant to meet any American where they are at and take them through increasing levels of education and challenge. The end product of 7 training evolutions across 250 days is a new and improved you.",
             "url": "",
@@ -81,7 +89,7 @@
             "duration": ""
         },
         {
-            "id": 11,
+            "id": 12,
             "title": "Americans First",
             "description": "While folks around the globe can benefit from this program, Commit 250 is not intended for other nations. We have studied the American lifestyle and how it is contributing to the US Health Crisis. Americans need the inspiration to act and the discipline to keep going. Our Daily Gratitude practices focus on American grit and greatness. We wrap up the last evolution and 'final 5' with civic actions that include volunteer work and learning about your local civics. Commit 250 is about making better citizens, focusing on Americans first.",
             "url": "",
@@ -92,122 +100,66 @@
     "program_structure": [
         {
             "id": 1,
-            "title": "Prep Week 1",
-            "description": "Commitment, planning, coordination, studying, stretching and testing. You will be ready to go.",
-            "duration": "1 week",
-            "image": "/assets/images/prep-week-1.jpg",
+            "title": "Evolution 1 - Building a Foundation",
+            "description": "The prep week includes designated time to sit and plan the upcoming 4 weeks of training. You will read recent literature and research on our current health crisis. You will explore diets and exercise programs, ultimately picking which ones you want to follow these upcoming 4 weeks. During your training weeks you will take part in 30 minutes minimum of arduous exercise daily with a reminder to stay on your chosen diet. Whether its intermittent fasting, keto, paleo, or something else, you will be encouraged to find a program that works for you. The program is adaptable to your needs, but we encourage you to find a program that works for you. Each day starts with a Daily Gratitude to pay respects to the great Americans before us and maintain perspective on this journey. You are encouraged to take starting pictures during the first prep week.",
+            "duration": "1 prep week, 4 training weeks",
+            "image": "",
             "url": ""
         },
         {
             "id": 2,
-            "title": "Training Evolution 1",
-            "description": "Foundation building and mindset development. Learn the core principles that will guide your health transformation journey.",
-            "duration": "4 weeks",
-            "image": "/assets/images/evolution-1.jpg",
+            "title": "Evolution 2 - Mental Health",
+            "description": "Evolution 2 focuses on mental health practices in visualization, prayer and meditation. You are encouraged to find a program and take part throughout the training cycle and encourage that into your 28 days. In a culture surrounded with increasing noise, it is essential that we learn how to find calm. You will study the mental health crisis that currently plagues Americans - especially hurting our veterans.",
+            "duration": "1 prep week, 4 training weeks",
+            "image": "",
             "url": ""
         },
         {
             "id": 3,
-            "title": "Prep Week 2", 
-            "description": "Nutrition fundamentals and meal planning strategies. Discover how to fuel your body for optimal performance.",
-            "duration": "1 week",
-            "image": "/assets/images/prep-week-2.jpg",
+            "title": "Evolution 3 - Its In The Blood",
+            "description": "Evolution 3 builds on Evolution 2, but adds a focus on your markers from blood work. If you have not had a recent test, you are encouraged to schedule one and the app can help you do that. You will read about the importance of those markers and how it is impacted by our diet, exercise, and lifestyle. Each marker is studied across each day in the training weeks to ensure you have a deep understanding of what is happening in your body.",
+            "duration": "1 prep week, 4 training weeks",
+            "image": "",
             "url": ""
         },
         {
             "id": 4,
-            "title": "Training Evolution 2", 
-            "description": "Nutrition fundamentals and meal planning strategies. Discover how to fuel your body for optimal performance.",
-            "duration": "4 weeks",
-            "image": "/assets/images/evolution-2.jpg",
+            "title": "Evolution 4 - Hormone Health",
+            "description": "We build upon Evolution 3, to learn more about unhealthy foods, artificial preservatives, dangerous additives to cosmetics, mold, and more. Here we encourage users to ensure they have their hormone levels checked if they haven't recently. Similar to the blood marker daily study the user does in Evolution 3, this evolution provides a small article to study each day about hormone health and environmental impacts. Endocrine disruptors are a major contributor to our health crisis.",
+            "duration": "1 prep week, 4 training weeks",
+            "image": "",
             "url": ""
         },
         {
             "id": 5,
-            "title": "Prep Week 3",
-            "description": "",
-            "duration": "1 week", 
-            "image": "/assets/images/prep-week-3.jpg",
+            "title": "Evolution 5 - Gut Feeling",
+            "description": "We build upon Evolution 4, having taken what we've learned about making healthier choices and reinforce it with macro and calorie tracking. Additionally, the user will be given daily educational material on the gut biome and the effectiveness of tracking calories long term.",
+            "duration": "1 prep week, 4 training weeks",
+            "image": "",
             "url": ""
         },
         {
             "id": 6,
-            "title": "Training Evolution 3",
-            "description": "Strength training basics and form mastery. Build a solid foundation of movement patterns and strength.",
-            "duration": "4 weeks", 
-            "image": "/assets/images/evolution-3.jpg",
+            "title": "Evolution 6 - Go Outside",
+            "description": "Now we introduce the importance of getting outside. Vitamin D is a critical nutrient for our health and our bodies are intended to naturally produce it from sun exposure. We walk through safe sunblocks based upon what we've previously learned and encourage the discipline to make getting outside a priority. Each day we provide information on the grounding, sunlight, and how it will benefit your life.",
+            "duration": "1 prep week, 4 training weeks",
+            "image": "",
             "url": ""
         },
         {
             "id": 7,
-            "title": "Prep Week 4",
-            "description": "",
-            "duration": "1 week",
-            "image": "/assets/images/prep-week-4.jpg",
+            "title": "Evolution 7 - A Better Citizen",
+            "description": "At this point you have accomplished a lot, you should be proud. You will find your perspective on life, family, work and all of the associated stressors are better managed. You are more confident in yourself and your ability to make an impact. How many folks do let their voice be heard because of a lack of confidence? How many folks did not speak up when it was needed because they were not in a healthy place. Coupled with your standard daily diet, physical and mental exercise, we add the challenge to learn your local civics. Contact your mayor's office, your local community representatives. If you have held something back you wish to speak on, now is the time. During your training weeks we encourage you to reach out to friends and family. Folks that you may have lost touch with over time. Pick up the phone and make the call. Life is too short.",
+            "duration": "1 prep week, 4 training weeks",
+            "image": "",
             "url": ""
         },
         {
             "id": 8,
-            "title": "Training Evolution 4",
-            "description": "",
-            "duration": "4 weeks",
-            "image": "/assets/images/evolution-4.jpg",
-            "url": ""
-        },
-        {
-            "id": 9,
-            "title": "Prep Week 5",
-            "description": "",
-            "duration": "1 week",
-            "image": "/assets/images/prep-week-5.jpg",
-            "url": ""
-        },
-        {
-            "id": 10,
-            "title": "Training Evolution 5",
-            "description": "",
-            "duration": "4 weeks",
-            "image": "/assets/images/evolution-5.jpg",
-            "url": ""
-        },
-        {
-            "id": 11,
-            "title": "Prep Week 6",
-            "description": "",
-            "duration": "1 week",
-            "image": "/assets/images/prep-week-6.jpg",
-            "url": ""
-        },
-        {
-            "id": 12,
-            "title": "Training Evolution 6",
-            "description": "",
-            "duration": "4 weeks",
-            "image": "/assets/images/evolution-6.jpg",
-            "url": ""
-        },
-        {
-            "id": 13,
-            "title": "Prep Week 7",
-            "description": "",
-            "duration": "1 week",
-            "image": "/assets/images/prep-week-7.jpg",
-            "url": ""
-        },
-        {
-            "id": 14,
-            "title": "Training Evolution 7",
-            "description": "",
-            "duration": "4 weeks",
-            "image": "/assets/images/evolution-7.jpg",
-            "url": ""
-        },
-        {
-            "id": 15,
             "title": "Final 5",
-            "description": "",
+            "description": "Congratulations. In these final 5 days you are challenged to schedule a way to celebrate your 250 days. Drop off foodstuffs at your local food bank or volunteer at a shelter. Pay forward the support that got you this far in the greatest nation on earth. Love your neighbor. Start a business, start a charity, learn a language, or volunteer. Find your next challenge. Find a way to stay at your best.",
             "duration": "5 days",
-            "image": "/assets/images/final-5.jpg",
+            "image": "",
             "url": ""
         }
     ],
@@ -297,6 +249,14 @@
             "title": "Why does it cost money, so many of my other apps are free?",
             "description": "We DO NOT SELL YOUR DATA. Your data is yours. We do not sell your data or information to third parties. To be able to cover the costs associated with hosting the app and website, we have to charge a small fee. $2.50/mo is a very reasonable price for the value you will receive.",
             "url": "/your-data",
+            "image": "",
+            "duration": ""
+        },
+        {
+            "id": 11,
+            "title": "I love this, do you accept sponsors?",
+            "description": "Yes. We would be delighted to work with you.Please contact sponsorships@reqtec.com.",
+            "url": "",
             "image": "",
             "duration": ""
         }
