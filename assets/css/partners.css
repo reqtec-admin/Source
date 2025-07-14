@@ -1,13 +1,30 @@
 /* Partners Section Styles */
 .gh-partners {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-    color: #fff;
     background: var(--background-color, #000);
+    color: #fff;
+    padding: 4rem 0;
+    position: relative;
+    clear: both;
+}
+
+.gh-partners .gh-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .gh-partners .gh-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gh-partners .gh-container {
+        padding: 0 var(--container-padding);
+    }
 }
 
 .gh-partners-divider {
@@ -17,7 +34,7 @@
 }
 
 .gh-partners-header {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: -0.025em;
     margin-bottom: 40px;
@@ -25,11 +42,17 @@
     color: #fff;
 }
 
+@media (min-width: 768px) {
+    .gh-partners-header {
+        font-size: 4.5rem;
+        text-align: center;
+    }
+}
+
 .gh-partners-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 40px;
-    max-width: 1200px;
     width: 100%;
     align-items: center;
     justify-items: center;
@@ -48,7 +71,6 @@
     padding: 30px 20px;
     min-height: 120px;
     width: 100%;
-    max-width: 200px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -86,14 +108,13 @@
 /* Responsive styles */
 @media (max-width: 991px) {
     .gh-partners-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 30px;
     }
     
     .gh-partner {
         padding: 25px 15px;
         min-height: 110px;
-        max-width: 180px;
     }
     
     .gh-partner-logo {
@@ -110,7 +131,7 @@
     
     .gh-partners-header {
         margin-bottom: 30px;
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
     
     .gh-partners-grid {
