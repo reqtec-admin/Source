@@ -88,7 +88,9 @@
     {{/is}}
 
     {{{body}}}
-    
+    {{#is "home"}}
+        {{> "components/partners"}}
+    {{/is}}
     {{> "components/footer"}}
     
 </div>
