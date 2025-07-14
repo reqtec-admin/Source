@@ -181,15 +181,15 @@
                 closeBtn.style.opacity = '0.5';
                 closeBtn.style.cursor = 'default';
                 closeBtn.style.color = '#999';
-                // Start 7 second timer to enable close button
-                console.log('Modal opened - setting 7 second timer for close button');
+                // Start 2 second timer to enable close button
+                console.log('Modal opened - setting 2 second timer for close button');
                 setTimeout(function() {
-                    console.log('7 seconds elapsed - enabling close button');
+                    console.log('2 seconds elapsed - enabling close button');
                     closeBtn.disabled = false;
                     closeBtn.style.opacity = '1';
                     closeBtn.style.cursor = 'pointer';
                     closeBtn.style.color = '#333';
-                }, 5000);
+                }, 2000);
             }
         } else {
             console.error('Modal element not found');
