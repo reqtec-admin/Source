@@ -34,19 +34,12 @@
 }
 
 .gh-partners-header {
-    font-size: 3.5rem;
+    font-size: calc(clamp(2.8rem,1.36vw + 2.25rem,4rem) * var(--factor, 1));
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
     margin-bottom: 40px;
     text-align: center;
     color: #fff;
-}
-
-@media (min-width: 768px) {
-    .gh-partners-header {
-        font-size: 4.5rem;
-        text-align: center;
-    }
 }
 
 .gh-partners-grid {
@@ -131,7 +124,6 @@
     
     .gh-partners-header {
         margin-bottom: 30px;
-        font-size: 3.5rem;
     }
     
     .gh-partners-grid {

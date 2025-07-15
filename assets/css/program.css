@@ -38,16 +38,11 @@
 }
 
 .gh-program-title {
-    font-size: 3.5rem;
+    font-size: calc(clamp(2.8rem,1.36vw + 2.25rem,4rem) * var(--factor, 1));
     font-weight: 700;
     margin: 0 0 1rem 0;
     color: var(--color-primary-text);
-}
-
-@media (min-width: 768px) {
-    .gh-program-title {
-        font-size: 4.5rem;
-    }
+    letter-spacing: -0.03em;
 }
 
 .gh-program-subtitle {
