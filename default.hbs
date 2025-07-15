@@ -91,7 +91,7 @@
     {{#is "home"}}
         {{> "components/partners"}}
     {{/is}}
-    {{> "components/footer"}}
+    {{> "components/footer-content"}}
     
 </div>
 
@@ -249,6 +249,8 @@
 
 {{!-- Scripts - handle responsive videos, infinite scroll, and navigation dropdowns --}}
 <script src="{{asset "built/source.js"}}"></script>
+
+<link rel="stylesheet" type="text/css" href="{{asset "css/footer-content.css"}}">
 
 {{!-- Ghost outputs required functional scripts with this tag, it should always be the last thing before the closing body tag --}}
 {{ghost_foot}}

@@ -1,0 +1,71 @@
+/* Source/css/footer-content.css */
+.gh-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.gh-footer-section {
+    background: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gh-footer-section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.gh-footer-content-signup {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-bottom: 16px;
+    text-align: left;
+}
+.gh-footer-content-signup .gh-button {
+    margin-left: 0;
+}
+
+.gh-footer-social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gh-footer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gh-footer-nav-item {
+    margin-bottom: 0.5rem;
+}
+
+.gh-footer-powered {
+    font-size: 1.5rem;
+}
+
+.gh-footer-social {
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+    .gh-footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .gh-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .gh-footer-section {
+        align-items: stretch;
+    }
+}
