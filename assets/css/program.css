@@ -140,20 +140,42 @@
         margin-bottom: 2rem;
         position: relative;
         z-index: 1;
+        isolation: isolate;
     }
     
     .gh-program-accordion {
         margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
     }
     
     .gh-accordion-content.active {
         margin-bottom: 1rem;
+        position: relative;
+        z-index: 1;
     }
     
     /* Ensure the program section doesn't interfere with the body content */
     .gh-program + .gh-container {
         position: relative;
         z-index: 2;
+    }
+    
+    /* Prevent accordion content from overflowing into other sections */
+    .gh-accordion-content {
+        position: relative;
+        z-index: 1;
+        contain: layout style paint;
+    }
+    
+    /* Add extra padding to prevent content cutoff */
+    .gh-accordion-content.active {
+        padding-bottom: 3rem;
+    }
+    
+    /* Ensure cards don't get cut off */
+    .gh-section-card:last-child {
+        margin-bottom: 1rem;
     }
 }
 
