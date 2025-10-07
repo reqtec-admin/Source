@@ -2,7 +2,7 @@
     "name": "commit250-theme",
     "description": "A Theme for the Commit 250 website",
     "demo": "https://source.ghost.io",
-    "version": "1.6.3",
+    "version": "1.6.4",
     "engines": {
         "ghost": ">=6.0.0"
     },
